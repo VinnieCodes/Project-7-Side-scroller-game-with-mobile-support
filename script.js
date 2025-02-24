@@ -258,13 +258,13 @@ window.addEventListener("DOMContentLoaded", function () {
       context.textAlign = "center";
       context.fillStyle = "black";
       context.fillText(
-        "GAME OVER, press 'Enter' or swipe down to try again!",
+        "GAME OVER, press 'Enter' to try again!",
         canvas.width / 2,
         200
       );
       context.fillStyle = "white";
       context.fillText(
-        "GAME OVER, press 'Enter' or swipe down to try again!",
+        "GAME OVER, press 'Enter' to try again!",
         canvas.width / 2 + 2,
         202
       );
@@ -280,17 +280,17 @@ window.addEventListener("DOMContentLoaded", function () {
     animate(0);
   }
 
-  function toggleFullScreen() {
-    console.log(document.fullscreenElement);
-    if (!document.fullscreenElement) {
-      canvas.requestFullscreen().catch((err) => {
-        // alert(`Error, can't enable full-screen mode: ${err.message}`);
-      });
-    } else {
-      document.exitFullscreen();
-    }
-  }
-  fullScreenButton.addEventListener("click", toggleFullScreen());
+  // function toggleFullScreen() {
+  //   console.log(document.fullscreenElement);
+  //   if (!document.fullscreenElement) {
+  //     canvas.requestFullscreen().catch((err) => {
+  //       // alert(`Error, can't enable full-screen mode: ${err.message}`);
+  //     });
+  //   } else {
+  //     document.exitFullscreen();
+  //   }
+  // }
+  // fullScreenButton.addEventListener("click", toggleFullScreen());
 
   const input = new InputHandler();
   const player = new Player(canvas.width, canvas.height);
